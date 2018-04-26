@@ -22,7 +22,7 @@ def validate_get_token_response_success_json(response):
     validate(response, schema)
 
 
-def validate_add_car_response_success_json(response):
+def add_car_response_success(response):
     schema ={
         "type": "object",
         "properties": {
@@ -59,7 +59,7 @@ def validate_car_data_json(car_data):
     validate(car_data, schema)
 
 
-def validate_get_car_response_success_json(response):
+def get_car_response_success(response):
     schema = {
         "definitions": {
             "car_details": {
@@ -92,7 +92,7 @@ def validate_get_car_response_success_json(response):
     validate(response, schema)
 
 
-def validate_get_cars_list_response_success(response):
+def get_cars_list_response_success(response):
     schema = {
         "definitions": {
             "car_details": {
@@ -148,7 +148,7 @@ def validate_response_fail_json(response):
     validate(response, schema)
 
 
-def validate_delet_car_success_json(response):
+def delet_car_response_success(response):
     schema = {
         "definitions": {
             "delete_car": {

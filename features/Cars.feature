@@ -19,8 +19,8 @@
 
     Scenario Outline: add cars
       Given tokens retrieved
-      Given create car with brand <brand>, model <model>, power rating <power> and daily price <price>
-      When send request to add car
+      When create car with brand <brand>, model <model>, power rating <power> and daily price <price>
+      And send request to add car
       Then receive response with code 200
       Then add car response is valid
       When send request to get cars list
@@ -36,8 +36,8 @@
 
     Scenario Outline: try to add car with invalid daily price
       Given tokens retrieved
-      Given create car with brand TOYOTA, model YARIS, power rating 100 and daily price <price>
-      When send request to add car
+      When create car with brand TOYOTA, model YARIS, power rating 100 and daily price <price>
+      And send request to add car
       Then receive response with code 400
       Then response contains error message: <error_message>
 
@@ -50,8 +50,8 @@
 
     Scenario Outline: try to add car with invalid power rating
       Given tokens retrieved
-      Given create car with brand TOYOTA, model YARIS, power rating <power> and daily price 100
-      When send request to add car
+      When create car with brand TOYOTA, model YARIS, power rating <power> and daily price 100
+      And send request to add car
       Then receive response with code 400
       Then response contains error message: <error_message>
 
@@ -74,7 +74,7 @@
 #    Fails! bug!!!
 #    Scenario: try to delete car that does not exist
 #      Given tokens retrieved
-#      And car_id is absent in app
+#      And car with car_id is absent in app
 #      When send request to delete car with car_id
 #      Then receive response with code 404
 #      Then response contains error message: car with id car_id not found in database
