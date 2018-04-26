@@ -14,65 +14,51 @@ def retrieveToken(scope):
 read_token = retrieveToken('R')
 write_token = retrieveToken('W')
 
+# # Add car to the list
+def addCar():
+    # old_list = retrieveCarsList()
+    headers = {'Content-Type': 'application/json', 'auth_token': write_token}
+    payload = {'brand': 'Toyota', 'model': 'Yaris', 'power_rating':400, 'daily_price':400}
+    r = requests.post('http://localhost:5000/v1/cars', headers=headers, data=json.dumps(payload))
+    print('Add car')
+    print(r.text)
+    # car_id = str(getCarId(old_list, retrieveCarsList()).pop())
+    # print('Car with id {} is added'.format(car_id))
+    # return car_id
+
+# addCar()
+
+def delete_car(write_token, car_id):
+    headers = {'Content-Type': 'application/json', 'auth_token': write_token}
+    response = requests.delete('http://localhost:5000/v1/cars/' + str(car_id), headers=headers)
+    print('Delete car')
+    print(response.text)
+    return response
+
+delete_car(write_token, 3)
+
+
 # Retrieve a list of cars
 def retrieveCarsList(read_token):
     headers = {'Content-Type': 'application/json', 'auth_token': read_token}
     r = requests.get('http://localhost:5000/v1/cars', headers=headers)
-    # print(r.text)
+    print(r.text)
     return r
+
+retrieveCarsList(read_token)
 
 def create_car_data_model(brand, id, price, model, power):
     data = {'brand': brand, 'car_id': id, 'daily_price': price, 'model': model, 'power_rating': power}
     return data
 
-def verify_car_data(car_data):
-    data_expected = create_car_data_model('s', 1, 1, 's', 1)
-    car_data['brand'] = 's'
-    car_data['car_id'] = 1
-    car_data['daily_price'] = 1
-    car_data['model'] = 's'
-    car_data['power_rating'] = 1
-    assert_that(car_data, equal_to(data_expected))
-
-def verify_car_data_json(car_data):
-    schema = {
-        'type': 'object',
-        'properties': {
-            'brand': {'type': 'string'},
-            'model': {'type': 'string'},
-            'car_id': {'type': 'number'},
-            'daily_price': {'type': 'number'},
-            'power_rating': {'type': 'number'},
-        },
-    }
-    validate(car_data, schema)
 
 
-
-
-#
 # def verify_cars_list(r, number):
 #     data = r.json().get('data')
 #     assert_that(len(data), equal_to(number))
 #     i = random.choice(range(0, number))
-#     verify_car_data(data[i])
 #
 # verify_cars_list(retrieveCarsList(read_token), 3)
-#
-# def create_expected_cars_list_data(r, number):
-#     data = r.json().get('data')
-#     assert_that(len(data), equal_to(number))
-#     data_expected = create_car_data_model('s', 1, 1, 's', 1)
-#     i = random.choice(range(0, number))
-#     data[i]['brand'] = 's'
-#     data[i]['car_id'] = 1
-#     data[i]['daily_price'] = 1
-#     data[i]['model'] = 's'
-#     data[i]['power_rating'] = 1
-#     assert_that(data[i], equal_to(data_expected))
-#
-#
-# create_expected_cars_list_data(retrieveCarsList(read_token), 3)
 
 
 def verify_car_parameters(r, name, values):
@@ -111,55 +97,14 @@ def getCarId(old_list, new_list):
 #
 #
 # # Retrieve car with car_id=1
-# def retrieveCar(car_id):
-#     headers = {'Content-Type': 'application/json', 'auth_token': read_token}
-#     r = requests.get('http://localhost:5000/v1/cars/' + car_id, headers=headers)
-#     # print(r.text)
-# # retrieveCar('1')
-#
-# # Add car to the list
-def addCar():
-    # old_list = retrieveCarsList()
-    headers = {'Content-Type': 'application/json', 'auth_token': write_token}
-    payload = {'brand': 'Toyota', 'model': 'Yaris', 'power_rating':400, 'daily_price':400}
-    r = requests.post('http://localhost:5000/v1/cars', headers=headers, data=json.dumps(payload))
+def retrieveCar(car_id):
+    headers = {'Content-Type': 'application/json', 'auth_token': read_token}
+    r = requests.get('http://localhost:5000/v1/cars/' + car_id, headers=headers)
+    print('Get car')
     print(r.text)
-    # car_id = str(getCarId(old_list, retrieveCarsList()).pop())
-    # print('Car with id {} is added'.format(car_id))
-    # return car_id
 
+retrieveCar('3')
 
-newCar = addCar()
-#
-# # Remove a car from the list
-# def removeCar(car_id):
-#     headers = {'Content-Type': 'application/json', 'auth_token': write_token}
-#     r = requests.delete('http://localhost:5000/v1/cars/' + car_id, headers=headers)
-#     print(r.text)
-#
-# # removeCar('5')
-#
-#
-# #bug - response 200 if car with id is not found, but response body is
-#
-# # {
-# #   "errorMessage": "application crashed",
-# #   "success": false
-# # }
-#
-# #bug - impossible to add more then some number of cars - to investigate
-#
-# #bug - inconsistency in spec - hourrate vs daily_price
-#
-# bug - price = 0:
-# "errorMessage": "INTERNAL SERVER ERROR",
-# "success": false
-#
-#     read_token = RetrieveToken.retrieveToken('R')
-#     write_token = RetrieveToken.retrieveToken('W')
-#
-#
-#
 #
 #
 # @then('response contains car {parameter} {values}')

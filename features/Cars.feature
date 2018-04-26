@@ -1,16 +1,14 @@
 
   Feature: manage cars list
 
-    Scenario: retrieve cars list
-      Given tokens retrieved
-      And app contains default cars list
+    Scenario: get cars list
+      Given app contains default cars list
       When send request to get cars list
       Then receive response with code 200
       And get cars list response is valid and contains N cars with unique ids
 
 
-    Scenario: retrieve car
-      Given tokens retrieved
+    Scenario: get car
       When send request to get car with car_id 1
       Then receive response with code 200
       Then get car response is valid
@@ -18,7 +16,6 @@
 
 
     Scenario Outline: add cars
-      Given tokens retrieved
       When create car with brand <brand>, model <model>, power rating <power> and daily price <price>
       And send request to add car
       Then receive response with code 200
@@ -35,7 +32,6 @@
 
 
     Scenario Outline: try to add car with invalid daily price
-      Given tokens retrieved
       When create car with brand TOYOTA, model YARIS, power rating 100 and daily price <price>
       And send request to add car
       Then receive response with code 400
@@ -49,7 +45,6 @@
 
 
     Scenario Outline: try to add car with invalid power rating
-      Given tokens retrieved
       When create car with brand TOYOTA, model YARIS, power rating <power> and daily price 100
       And send request to add car
       Then receive response with code 400
@@ -63,12 +58,20 @@
 
 
     Scenario: delete car
-      Given tokens retrieved
-      And car with car_id exists in app
+      Given car with car_id exists in app
       When send request to delete car with car_id
       Then receive response with code 200
       Then delete car response is valid
       Then car with car_id is absent in app
+
+
+#    Blocked!!! by bug with removing of the last car from db
+#    Scenario: try to get empty cars list
+#      Given tokens retrieved
+#      Given all cars are removed from app
+#      When send request to get cars list
+#      Then receive response with code 200
+#      And get cars list response is valid and contains 0 cars with unique ids
 
 
 #    Fails! bug!!!
@@ -83,10 +86,10 @@
 #
 #    Scenario: try to perform read operation with write token
 #    Scenario: try to perform write operation with read token
-#    Scenario: try to get empty cars list
 #    Scenario: try to add car without some fields
 #    Scenario: try to add car with string instead integer
-#    Scenario: make sure that car with error is not added to app
+#    Scenario: wrong urls
+
 
 
 

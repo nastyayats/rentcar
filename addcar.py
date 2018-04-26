@@ -9,7 +9,8 @@ def create_car(brand, model, power, price):
 def add_car(write_token, payload):
     headers = {'Content-Type': 'application/json', 'auth_token': write_token}
     response = requests.post('http://localhost:5000/v1/cars', headers=headers, data=json.dumps(payload))
-    print(response.text)
+    print('Add car')
+    print(response)
     return response
 
 

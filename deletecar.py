@@ -7,6 +7,8 @@ from getcarslist import get_cars_list
 def delete_car(write_token, car_id):
     headers = {'Content-Type': 'application/json', 'auth_token': write_token}
     response = requests.delete('http://localhost:5000/v1/cars/' + car_id, headers=headers)
+    print('Delete car with id {}'.format(car_id))
+    print(response)
     print(response.text)
     return response
 
@@ -18,4 +20,5 @@ def car_id_is_absent_in_app(car_id, read_token):
     ids_list = list()
     for x in response.json().get('data'):
         ids_list.append(x.get('car_id'))
+    print('Ids list: {}'.format(ids_list))
     assert_that(car_id not in ids_list)
