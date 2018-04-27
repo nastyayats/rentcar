@@ -24,7 +24,7 @@ def step_impl(context, car_id):
     context.car_id = car_id
 
 
-@when('send request to get car with car_id')
+@when('send request to get car')
 def step_impl(context):
     context.response = get_car(context.car_id, context.read_token)
 
@@ -49,7 +49,13 @@ def step_impl(context, brand, model, power, price):
 def step_impl(context, number):
     validatejson.get_cars_list_response_success(context.response.json())
     data = context.response.json().get('data')
-    if number != 'N':
-        assert_that(len(data), equal_to(int(number)))
+    assert_that(len(data), equal_to(int(number)))
     verify_car_ids_unique(data)
+
+
+@then('get cars list response is valid but contains no cars')
+def step_impl(context):
+    validatejson.get_cars_list_response_success(context.response.json())
+    assert_that(len(context.response.json().get('data')) == 0)
+
 

@@ -1,7 +1,7 @@
 
 Bug #1
+Summery: Inconsistency in specification: field "hourrate" from object description corresponds to "daily_price" in json example
 Severity: minor
-Name: Inconsistency in specification: field "hourrate" from object description corresponds to "daily_price" in json example
 Description:
 In specification structure of json with car contains field "hourrate", but example of response in specification and implemented api contain field "daily_price".
 Expected result:
@@ -13,8 +13,8 @@ Json example from spec:
 
 
 Bug #2
+Summery: response OK with error message for attempt to delete absent car absent
 Severity: major
-Name: response OK with error message for attempt to delete absent car absent
 Description:
 Send http request DELETE with car id that does not exist in db.
 Receive response with status code 200, that contains json payload:
@@ -32,8 +32,8 @@ For e.g.:
 
 
 Bug #3:
+Summery: app fails to remove last car in list
 Severity: major
-Name: app fails to remove last car in list
 Description:
 Only one car is present in db.
 Send http request DELETE with id of this car.
@@ -47,8 +47,8 @@ get list request returns response with empty list.
 
 
 Bug #4:
+Summery: attempt to add car with daily_price = 0 fails with internal server error
 Severity: major
-Name: attempt to add car with daily_price = 0 fails with internal server error
 Description:
 Send http request POST with "daily_price": 0 in payload.
 For e.g.: {"brand": "Ford", "daily_price": 0, "model": "Focus", "power_rating": 100}.
@@ -62,8 +62,8 @@ According to documentation app should process "daily_price": 0 as valid value an
 
 
 Bug #5
+Summery: extra white space at the and of error message
 Severity: trivial
-Name: extra white space at the and of error message
 Description:
 Now:
 "Expected key 'model' having non-empty string/unicode value, got type <type 'unicode'> with value "
@@ -72,8 +72,8 @@ Expected result:
 
 
 Bug #6 MAKE BETTER DESCRIPTION
+Summery: comma delimited value can be added to integer fields in car payload
 Severity: minor
-Name: comma delimited value can be added to integer fields in car payload
 Description:
 Add car wit payloads
 {"brand":"A", "model":"B", "power_rating":1.5, "daily_price":1}
@@ -82,4 +82,14 @@ Car is added successfully, same values are returned in get car response.
 Expected results: only integer values can be added to this fields/
 
 
-
+Bug#7
+Summery: only 8 cars are retrieved in cars list
+Severity: critical
+Description:
+Steps to reproduce:
+More then 8 cars are added to db.
+Any car can be retrieved by its id.
+Send http request GET with url /v1/cars to retrieve cars list.
+Receive response with only 8 cars in array 'data'.
+Expected result:
+It should be no limitations on amount of cars in response.

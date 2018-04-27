@@ -22,3 +22,7 @@ def verify_car_ids_unique(data):
     assert_that(len(ids) == len(set(ids)))
 
 
+def get_cars_list_size(data):
+    return len(data)
+
+

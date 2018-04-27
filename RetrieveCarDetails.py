@@ -8,6 +8,7 @@ from jsonschema import validate
 def retrieveToken(scope):
     payload = {'client_id': 'f2a1ed52710d4533bde25be6da03b6e3', 'client_secret': 'ZYDPLLBWSK3MVQJSIYHB1OR2JXCY0X2C5UJ2QAR2MAAIT5Q', 'scope':scope}
     r = requests.post('http://localhost:5000/v1/token', data=json.dumps(payload))
+    print(r.text)
     return r.json().get('auth_token')
 
 
@@ -27,7 +28,7 @@ def addCar():
     # print('Car with id {} is added'.format(car_id))
     # return car_id
 
-addCar()
+# addCar()
 
 def delete_car(write_token, car_id):
     headers = {'Content-Type': 'application/json', 'auth_token': write_token}
