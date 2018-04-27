@@ -17,21 +17,21 @@
 
 
     @blocked @bug#3
-#    Scenario: try to get empty cars list
-#      Given all cars are removed from app
-#      When send request to get cars list
-#      Then receive response with code 200
-#      And get cars list response is valid but contains no cars
+    Scenario: try to get empty cars list
+      Given all cars are removed from app
+      When send request to get cars list
+      Then receive response with code 200
+      And get cars list response is valid but contains no cars
 
 
     @blocked @bug#3
-#    Scenario: get cars list
-#      Given all cars are removed from app
-#      And create car with brand A, model B, power rating 1 and daily price 2
-#      When send requests to add 10 cars and verify cars added
-#      When send request to get cars list
-#      Then receive response with code 200
-#      And get cars list response is valid and contains 10 cars with unique ids
+    Scenario: get cars list
+      Given all cars are removed from app
+      And create car with brand A, model B, power rating 1 and daily price 2
+      When send requests to add 10 cars and verify cars added
+      When send request to get cars list
+      Then receive response with code 200
+      And get cars list response is valid and contains 10 cars with unique ids
 
 
 

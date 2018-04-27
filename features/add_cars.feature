@@ -24,7 +24,7 @@
 
       Examples: invalid price values
       |price| error_message                                                      |
-#      | 0   | Key 'daily_price' must have a value >= 0 and <= 500, got value 0   |
+      | 0   | Key 'daily_price' must have a value >= 0 and <= 500, got value 0   |
       | -1  | Key 'daily_price' must have a value >= 0 and <= 500, got value -1  |
       | 501 | Key 'daily_price' must have a value >= 0 and <= 500, got value 501 |
 
@@ -60,8 +60,8 @@
       | {"brand":"A", "model":"B", "power_rating":1, "daily_price":1               | Please use JSON as input data |
       | {"brand":"A", "model":"B", "power_rating":"str", "daily_price":1}          | Expected key 'power_rating' having non-empty integer value, got type <type 'unicode'> with value str |
       | {"brand":"A", "model":"B", "power_rating":1, "daily_price":"str"}          | Expected key 'daily_price' having non-empty integer value, got type <type 'unicode'> with value str  |
-#      | {"brand":"", "model":"B", "power_rating":1, "daily_price":1}               | Expected key 'model' having non-empty string/unicode value, got type <type 'unicode'> with value  |
-#      | {"brand":"A", "model":"", "power_rating":1, "daily_price":1}               | Expected key 'model' having non-empty string/unicode value, got type <type 'unicode'> with value  |
-#      | {"brand":"A", "model":"B", "power_rating":1.5, "daily_price":1}            | Expected key 'daily_price' having non-empty integer value, got type <type 'unicode'> with value 1.5  |
-#      | {"brand":"A", "model":"B", "power_rating":1, "daily_price":1.5}            | Expected key 'daily_price' having non-empty integer value, got type <type 'unicode'> with value 1.5  |
-#
+      | {"brand":"", "model":"B", "power_rating":1, "daily_price":1}               | Expected key 'model' having non-empty string/unicode value, got type <type 'unicode'> with value  |
+      | {"brand":"A", "model":"", "power_rating":1, "daily_price":1}               | Expected key 'model' having non-empty string/unicode value, got type <type 'unicode'> with value  |
+      | {"brand":"A", "model":"B", "power_rating":1.5, "daily_price":1}            | Expected key 'daily_price' having non-empty integer value, got type <type 'unicode'> with value 1.5  |
+      | {"brand":"A", "model":"B", "power_rating":1, "daily_price":1.5}            | Expected key 'daily_price' having non-empty integer value, got type <type 'unicode'> with value 1.5  |
+
