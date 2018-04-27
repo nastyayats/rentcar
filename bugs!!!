@@ -1,15 +1,15 @@
 
 Bug #1
-Summery: Inconsistency in specification: field "hourrate" from object description corresponds to "daily_price" in json example
-Severity: minor
+Summery: only 8 cars are retrieved in cars list
+Severity: critical
 Description:
-In specification structure of json with car contains field "hourrate", but example of response in specification and implemented api contain field "daily_price".
+Steps to reproduce:
+More then 8 cars are added to db.
+Any car can be retrieved by its id.
+Send http request GET with url /v1/cars to retrieve cars list.
+Receive response with only 8 cars in array 'data'.
 Expected result:
-1. To be defined if car price is measured in hours on in days, and rename the field accordingly.
-Json structer from spec:
-object { boolean success; string errorMessage ?; object { integer car_id ?; string brand; string model; integer powerrating; integer hourrate; } data ?; }
-Json example from spec:
-{ "data": { "brand": "Ford", "car_id": 1, "daily_price": 100, "model": "Focus", "power_rating": 100 }, "success": true }
+It should be no limitations on amount of cars in response.
 
 
 Bug #2
@@ -83,13 +83,18 @@ Expected results: only integer values can be added to this fields/
 
 
 Bug#7
-Summery: only 8 cars are retrieved in cars list
-Severity: critical
+Summery: Inconsistency in specification: field "hourrate" from object description corresponds to "daily_price" in json example
+Severity: minor
 Description:
-Steps to reproduce:
-More then 8 cars are added to db.
-Any car can be retrieved by its id.
-Send http request GET with url /v1/cars to retrieve cars list.
-Receive response with only 8 cars in array 'data'.
+In specification structure of json with car contains field "hourrate", but example of response in specification and implemented api contain field "daily_price".
 Expected result:
-It should be no limitations on amount of cars in response.
+1. To be defined if car price is measured in hours on in days, and rename the field accordingly.
+Json structer from spec:
+object { boolean success; string errorMessage ?; object { integer car_id ?; string brand; string model; integer powerrating; integer hourrate; } data ?; }
+Json example from spec:
+{ "data": { "brand": "Ford", "car_id": 1, "daily_price": 100, "model": "Focus", "power_rating": 100 }, "success": true }
+
+
+Improvement#1
+Summary: return car_id in response to add car request
+
