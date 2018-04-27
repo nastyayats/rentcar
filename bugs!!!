@@ -61,9 +61,25 @@ Expected result:
 According to documentation app should process "daily_price": 0 as valid value and add such car to db
 
 
+Bug #5
+Severity: trivial
+Name: extra white space at the and of error message
+Description:
+Now:
+"Expected key 'model' having non-empty string/unicode value, got type <type 'unicode'> with value "
+Expected result:
+"Expected key 'model' having non-empty string/unicode value, got type <type 'unicode'> with value"
+
+
+Bug #6 MAKE BETTER DESCRIPTION
+Severity: minor
+Name: comma delimited value can be added to integer fields in car payload
+Description:
+Add car wit payloads
+{"brand":"A", "model":"B", "power_rating":1.5, "daily_price":1}
+or {"brand":"A", "model":"B", "power_rating":1, "daily_price":1.5}, with comma delimited values in the integer fields.
+Car is added successfully, same values are returned in get car response.
+Expected results: only integer values can be added to this fields/
 
 
 
-
-
-bug - impossible to add more then some number of cars - to investigate

@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e83c2d0-56a9-404e-861c-1d504f5df3a5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/bugs!!!" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/features/environment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/features/steps/addsteps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/features/steps/commonsteps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/features/steps/deletesteps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/features/steps/getsteps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RetrieveCarDetails.py" beforeDir="false" afterPath="$PROJECT_DIR$/RetrieveCarDetails.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addcar.py" beforeDir="false" afterPath="$PROJECT_DIR$/addcar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deletecar.py" beforeDir="false" afterPath="$PROJECT_DIR$/deletecar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bugs!!!" beforeDir="false" afterPath="$PROJECT_DIR$/bugs!!!" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/Cars.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/Cars.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/steps/steps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/getcar.py" beforeDir="false" afterPath="$PROJECT_DIR$/getcar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/getcarslist.py" beforeDir="false" afterPath="$PROJECT_DIR$/getcarslist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/steps/addsteps.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/addsteps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/steps/commonsteps.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/commonsteps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/steps/getsteps.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/getsteps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/validatejson.py" beforeDir="false" afterPath="$PROJECT_DIR$/validatejson.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,26 +27,17 @@
       <file leaf-file-name="Cars.feature" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/Cars.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+            <state relative-caret-position="153">
+              <caret line="9" column="78" lean-forward="true" selection-start-line="9" selection-start-column="78" selection-end-line="9" selection-end-column="78" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bugs!!!" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bugs!!!">
+      <file leaf-file-name="getsteps.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/features/steps/getsteps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="commonsteps.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/features/steps/commonsteps.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="646">
+              <caret line="38" column="36" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -59,20 +45,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="environment.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features/environment.py">
+      <file leaf-file-name="validatejson.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/validatejson.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="-809">
+              <caret line="104" column="52" selection-start-line="104" selection-start-column="52" selection-end-line="104" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gettoken.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gettoken.py">
+      <file leaf-file-name="getcar.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/getcar.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+            <state relative-caret-position="204">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="commonsteps.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/features/steps/commonsteps.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bugs!!!" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bugs!!!">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1445">
+              <caret line="85" selection-start-line="85" selection-end-line="85" />
             </state>
           </provider>
         </entry>
@@ -80,8 +87,8 @@
       <file leaf-file-name="addcar.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/addcar.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+            <state relative-caret-position="50">
+              <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -92,41 +99,29 @@
       <file leaf-file-name="addsteps.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/steps/addsteps.py">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getcarslist.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/getcarslist.py">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deletesteps.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features/steps/deletesteps.py">
+      <file leaf-file-name="RetrieveCarDetails.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RetrieveCarDetails.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="57" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="57" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getsteps.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features/steps/getsteps.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getcar.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/getcar.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="391">
+              <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -150,6 +145,8 @@
       <find>car with car_id</find>
       <find>car_id is absent in app</find>
       <find>send request to get car with car_id</find>
+      <find>Get car</find>
+      <find>list1</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;</replace>
@@ -168,15 +165,11 @@
         <option value="$PROJECT_DIR$/behave_start.py" />
         <option value="$PROJECT_DIR$/verifyjson.py" />
         <option value="$PROJECT_DIR$/definitions.json" />
-        <option value="$PROJECT_DIR$/validatejson.py" />
         <option value="$PROJECT_DIR$/gettoken.py" />
         <option value="$PROJECT_DIR$/RetrieveToken.py" />
-        <option value="$PROJECT_DIR$/RetrieveCarDetails.py" />
-        <option value="$PROJECT_DIR$/addcar.py" />
         <option value="$PROJECT_DIR$/getcarslist.py" />
         <option value="$PROJECT_DIR$/deletecar.py" />
         <option value="$PROJECT_DIR$/getcar.py" />
-        <option value="$PROJECT_DIR$/bugs!!!" />
         <option value="$PROJECT_DIR$/features/steps/deletecar.py" />
         <option value="$PROJECT_DIR$/features/steps/addcar.py" />
         <option value="$PROJECT_DIR$/features/steps/getcar.py" />
@@ -184,8 +177,14 @@
         <option value="$PROJECT_DIR$/features/steps/common.py" />
         <option value="$PROJECT_DIR$/features/steps/getcars.py" />
         <option value="$PROJECT_DIR$/features/environment.py" />
-        <option value="$PROJECT_DIR$/features/Cars.feature" />
+        <option value="$PROJECT_DIR$/RetrieveCarDetails.py" />
         <option value="$PROJECT_DIR$/features/steps/commonsteps.py" />
+        <option value="$PROJECT_DIR$/features/steps/addsteps.py" />
+        <option value="$PROJECT_DIR$/features/steps/getsteps.py" />
+        <option value="$PROJECT_DIR$/validatejson.py" />
+        <option value="$PROJECT_DIR$/addcar.py" />
+        <option value="$PROJECT_DIR$/features/Cars.feature" />
+        <option value="$PROJECT_DIR$/bugs!!!" />
       </list>
     </option>
   </component>
@@ -200,6 +199,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -227,7 +227,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -376,23 +375,29 @@
       <option name="project" value="LOCAL" />
       <updated>1524763396197</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update tests">
+      <created>1524781168072</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1524781168072</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="33" y="0" width="1400" height="751" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6621924" visible="true" weight="0.23127754" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6557734" visible="true" weight="0.26284876" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.2792642" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2512563" />
-      <window_info id="Structure" order="1" sideWeight="0.3378076" side_tool="true" visible="true" weight="0.23127754" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23115578" />
+      <window_info id="Structure" order="1" sideWeight="0.34422657" side_tool="true" visible="true" weight="0.26284876" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.18394649" />
       <window_info id="Favorites" order="2" sideWeight="0.2374582" side_tool="true" weight="0.17474303" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.17922948" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39698493" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -407,11 +412,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update structure" />
+    <MESSAGE value="Update tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="11" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -588,13 +594,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/definitions.json" />
-    <entry file="file://$PROJECT_DIR$/validatejson.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2550">
-          <caret line="150" selection-start-line="150" selection-end-line="150" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/junit2html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -617,47 +616,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getcarslist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RetrieveCarDetails.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="25" column="52" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/deletecar.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getcar.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bugs!!!">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -665,36 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="57" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/features/steps/getsteps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/features/steps/addsteps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addcar.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -705,27 +637,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/features/Cars.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/features/environment.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RetrieveCarDetails.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getcarslist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getcar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validatejson.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-809">
+          <caret line="104" column="52" selection-start-line="104" selection-start-column="52" selection-end-line="104" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/steps/getsteps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="36" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/features/steps/commonsteps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/steps/addsteps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addcar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/Cars.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="78" lean-forward="true" selection-start-line="9" selection-start-column="78" selection-end-line="9" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bugs!!!">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1445">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
         </state>
       </provider>
     </entry>

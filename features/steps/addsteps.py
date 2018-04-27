@@ -9,6 +9,12 @@ def step_impl(context, brand, model, power, price):
     context.payload = create_car(brand, model, power, price)
 
 
+@when('create car with payload {payload}')
+def step_impl(context, payload):
+    context.payload = payload
+    print('Payload: {}'.format(payload))
+
+
 @when('send request to add car')
 def step_impl(context):
     context.response = add_car(context.write_token, context.payload)
@@ -17,7 +23,7 @@ def step_impl(context):
 @when('send request to add car and retrieve its car_id')
 def step_impl(context):
     old_list = get_cars_list(context.read_token).json().get('data')
-    add_car(context.write_token, context.payload)
+    context.response = add_car(context.write_token, context.payload)
     new_list = get_cars_list(context.read_token).json().get('data')
     context.car_id = str(get_new_car_id(old_list, new_list).pop())
 

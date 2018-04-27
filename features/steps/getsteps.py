@@ -21,6 +21,12 @@ def step_impl(context):
 @when('send request to get car with car_id {car_id}')
 def step_impl(context, car_id):
     context.response = get_car(car_id, context.read_token)
+    context.car_id = car_id
+
+
+@when('send request to get car with car_id')
+def step_impl(context):
+    context.response = get_car(context.car_id, context.read_token)
 
 
 @when('send request to get cars list')

@@ -19,6 +19,7 @@ def addCar():
     # old_list = retrieveCarsList()
     headers = {'Content-Type': 'application/json', 'auth_token': write_token}
     payload = {'brand': 'Toyota', 'model': 'Yaris', 'power_rating':400, 'daily_price':400}
+    # payload = '{\"brand\":\"Aa\", \"model\":\"Bb\", \"power_rating\":1, \"daily_price\":1}'
     r = requests.post('http://localhost:5000/v1/cars', headers=headers, data=json.dumps(payload))
     print('Add car')
     print(r.text)
@@ -26,7 +27,7 @@ def addCar():
     # print('Car with id {} is added'.format(car_id))
     # return car_id
 
-# addCar()
+addCar()
 
 def delete_car(write_token, car_id):
     headers = {'Content-Type': 'application/json', 'auth_token': write_token}
@@ -35,7 +36,7 @@ def delete_car(write_token, car_id):
     print(response.text)
     return response
 
-delete_car(write_token, 3)
+# delete_car(write_token, 3)
 
 
 # Retrieve a list of cars
@@ -45,7 +46,7 @@ def retrieveCarsList(read_token):
     print(r.text)
     return r
 
-retrieveCarsList(read_token)
+# retrieveCarsList(read_token)
 
 def create_car_data_model(brand, id, price, model, power):
     data = {'brand': brand, 'car_id': id, 'daily_price': price, 'model': model, 'power_rating': power}
@@ -103,7 +104,7 @@ def retrieveCar(car_id):
     print('Get car')
     print(r.text)
 
-retrieveCar('3')
+# retrieveCar('3')
 
 #
 #

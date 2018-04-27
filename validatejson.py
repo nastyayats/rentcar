@@ -46,8 +46,8 @@ def validate_car_data_json(car_data):
                     "car_id": {"type": "number"},
                     "brand": {"type": "string"},
                     "model": {"type": "string"},
-                    "power_rating": {"type": "number"},
-                    "daily_price": {"type": "number"},
+                    "power_rating": {"type": "integer"},
+                    "daily_price": {"type": "integer"},
                 },
                 "required": ["car_id", "brand", "model", "power_rating", "daily_price"],
                 "additionalProperties": False
@@ -68,8 +68,8 @@ def get_car_response_success(response):
                     "car_id": {"type": "number"},
                     "brand": {"type": "string"},
                     "model": {"type": "string"},
-                    "power_rating": {"type": "number"},
-                    "daily_price": {"type": "number"},
+                    "power_rating": {"type": "integer"},
+                    "daily_price": {"type": "integer"},
                 },
                 "required": ["car_id", "brand", "model", "power_rating", "daily_price"],
                 "additionalProperties": False
@@ -101,8 +101,8 @@ def get_cars_list_response_success(response):
                     "car_id": {"type": "number"},
                     "brand": {"type": "string"},
                     "model": {"type": "string"},
-                    "power_rating": {"type": "number"},
-                    "daily_price": {"type": "number"},
+                    "power_rating": {"type": "integer"},
+                    "daily_price": {"type": "integer"},
                 },
                 "required": ["car_id", "brand", "model", "power_rating", "daily_price"],
                 "additionalProperties": False

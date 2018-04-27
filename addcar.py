@@ -3,12 +3,12 @@ import json
 
 
 def create_car(brand, model, power, price):
-    return {'brand': brand, 'model': model, 'power_rating':power, 'daily_price':price}
+    return json.dumps({'brand': brand, 'model': model, 'power_rating':power, 'daily_price':price})
 
 
 def add_car(write_token, payload):
     headers = {'Content-Type': 'application/json', 'auth_token': write_token}
-    response = requests.post('http://localhost:5000/v1/cars', headers=headers, data=json.dumps(payload))
+    response = requests.post('http://localhost:5000/v1/cars', headers=headers, data=payload)
     print('Add car')
     print(response)
     return response
