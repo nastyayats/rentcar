@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8e83c2d0-56a9-404e-861c-1d504f5df3a5" name="Default" comment="Update tests">
-      <change afterPath="$PROJECT_DIR$/features/add_cars.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/features/delete_cars.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/features/tokens.feature" afterDir="false" />
+    <list default="true" id="8e83c2d0-56a9-404e-861c-1d504f5df3a5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RetrieveCarDetails.py" beforeDir="false" afterPath="$PROJECT_DIR$/RetrieveCarDetails.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugs!!!" beforeDir="false" afterPath="$PROJECT_DIR$/bugs!!!" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/Cars.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/get_cars.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/steps/addsteps.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/add.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/steps/commonsteps.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/steps/deletesteps.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/delete.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/steps/getsteps.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/gets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/getcarslist.py" beforeDir="false" afterPath="$PROJECT_DIR$/getcarslist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetrieveCarDetails.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -84,16 +74,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="validatejson.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/validatejson.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2006">
-              <caret line="118" column="30" selection-start-line="118" selection-start-column="30" selection-end-line="118" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="common.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/steps/common.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -105,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="step_registry.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/behave/step_registry.py">
+      <file leaf-file-name="prototypes.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/prototypes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="195">
+              <caret line="118" column="24" selection-start-line="118" selection-start-column="24" selection-end-line="118" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -189,6 +170,7 @@
         <option value="$PROJECT_DIR$/features/get_cars.feature" />
         <option value="$PROJECT_DIR$/features/add_cars.feature" />
         <option value="$PROJECT_DIR$/features/steps/common.py" />
+        <option value="$PROJECT_DIR$/prototypes.py" />
       </list>
     </option>
   </component>
@@ -396,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524821564451</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update tests">
+      <created>1524861624001</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1524861624001</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -437,13 +426,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/requests/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RetrieveCarDetails.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -638,13 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RetrieveCarDetails.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addcar.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -742,6 +717,20 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RetrieveCarDetails.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="36" column="24" selection-end-line="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototypes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="118" column="24" selection-start-line="118" selection-start-column="24" selection-end-line="118" selection-end-column="24" />
         </state>
       </provider>
     </entry>
