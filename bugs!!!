@@ -13,7 +13,7 @@ It should be no limitations on amount of cars in response.
 
 
 Bug #2
-Summery: response OK with error message for attempt to delete absent car absent
+Summery: response OK with error message for attempt to delete absent car
 Severity: major
 Description:
 Send http request DELETE with car id that does not exist in db.

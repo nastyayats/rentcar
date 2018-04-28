@@ -1,11 +1,11 @@
-  @add
-  Feature: add car
+  @create @cars
+  Feature: cars creation
 
-    Scenario Outline: add cars
+    Scenario Outline: create cars
       Given prepare car with brand <brand>, model <model>, power rating <power> and daily price <price>
-      When send request to add car and retrieve its car_id
+      When send request to create car and retrieve its car_id
       Then receive response with code 200
-      Then add car response is valid
+      Then response for car creation request is valid
 
       Examples: valid car parameters
       | brand  | model |power|price|
@@ -16,22 +16,23 @@
 
 
     @fails @bug#4
-    Scenario Outline: try to add car with invalid daily price
+    Scenario Outline: try to create car with invalid daily price
       Given prepare car with brand TOYOTA, model YARIS, power rating 100 and daily price <price>
-      When send request to add car
+      When send request to create car
       Then receive response with code 400
       Then response contains error message: <error_message>
 
       Examples: invalid price values
       |price| error_message                                                      |
+#     firs example fails beacause of bug#4
       | 0   | Key 'daily_price' must have a value >= 0 and <= 500, got value 0   |
       | -1  | Key 'daily_price' must have a value >= 0 and <= 500, got value -1  |
       | 501 | Key 'daily_price' must have a value >= 0 and <= 500, got value 501 |
 
 
-    Scenario Outline: try to add car with invalid power rating
+    Scenario Outline: try to create car with invalid power rating
       Given prepare car with brand TOYOTA, model YARIS, power rating <power> and daily price 100
-      When send request to add car
+      When send request to create car
       Then receive response with code 400
       Then response contains error message: <error_message>
 
@@ -43,9 +44,9 @@
 
 
     @fails @bug#5 @bug#6
-    Scenario Outline: try to add car with invalid payload
+    Scenario Outline: try to create car with invalid payload
       Given prepare car with payload <payload>
-      When send request to add car
+      When send request to create car
       Then receive response with code 400
       Then response contains error message: <error_message>
 
@@ -60,8 +61,10 @@
       | {"brand":"A", "model":"B", "power_rating":1, "daily_price":1               | Please use JSON as input data |
       | {"brand":"A", "model":"B", "power_rating":"str", "daily_price":1}          | Expected key 'power_rating' having non-empty integer value, got type <type 'unicode'> with value str |
       | {"brand":"A", "model":"B", "power_rating":1, "daily_price":"str"}          | Expected key 'daily_price' having non-empty integer value, got type <type 'unicode'> with value str  |
+#      next 2 examples fail because of bug#5
       | {"brand":"", "model":"B", "power_rating":1, "daily_price":1}               | Expected key 'model' having non-empty string/unicode value, got type <type 'unicode'> with value  |
       | {"brand":"A", "model":"", "power_rating":1, "daily_price":1}               | Expected key 'model' having non-empty string/unicode value, got type <type 'unicode'> with value  |
+#      next 2 examples fail because of bug#6
       | {"brand":"A", "model":"B", "power_rating":1.5, "daily_price":1}            | Expected key 'daily_price' having non-empty integer value, got type <type 'unicode'> with value 1.5  |
       | {"brand":"A", "model":"B", "power_rating":1, "daily_price":1.5}            | Expected key 'daily_price' having non-empty integer value, got type <type 'unicode'> with value 1.5  |
 

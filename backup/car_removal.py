@@ -1,7 +1,7 @@
 import requests
 from hamcrest import assert_that, equal_to
-from car_retrieval import send_car_retrieval_request
-from cars_list_retrieval import send_cars_list_retrieval_request
+from backup.car_retrieval import send_car_retrieval_request
+from backup.cars_list_retrieval import send_cars_list_retrieval_request
 
 url = 'http://localhost:5000/v1/cars/'
 
