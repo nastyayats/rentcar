@@ -1,8 +1,8 @@
-
+  @add
   Feature: add car
 
     Scenario Outline: add cars
-      Given create car with brand <brand>, model <model>, power rating <power> and daily price <price>
+      Given prepare car with brand <brand>, model <model>, power rating <power> and daily price <price>
       When send request to add car and retrieve its car_id
       Then receive response with code 200
       Then add car response is valid
@@ -17,7 +17,7 @@
 
     @fails @bug#4
     Scenario Outline: try to add car with invalid daily price
-      Given create car with brand TOYOTA, model YARIS, power rating 100 and daily price <price>
+      Given prepare car with brand TOYOTA, model YARIS, power rating 100 and daily price <price>
       When send request to add car
       Then receive response with code 400
       Then response contains error message: <error_message>
@@ -30,7 +30,7 @@
 
 
     Scenario Outline: try to add car with invalid power rating
-      Given create car with brand TOYOTA, model YARIS, power rating <power> and daily price 100
+      Given prepare car with brand TOYOTA, model YARIS, power rating <power> and daily price 100
       When send request to add car
       Then receive response with code 400
       Then response contains error message: <error_message>
@@ -44,7 +44,7 @@
 
     @fails @bug#5 @bug#6
     Scenario Outline: try to add car with invalid payload
-      Given create car with payload <payload>
+      Given prepare car with payload <payload>
       When send request to add car
       Then receive response with code 400
       Then response contains error message: <error_message>

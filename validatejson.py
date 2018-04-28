@@ -1,168 +1,44 @@
 from jsonschema import validate
+import os
 
 
-def validate_get_token_response_success_json(response):
+def validate_json_in_response_to_successful_get_token_request(response):
     schema = {
-        "definitions": {
-            "get_token_response_success": {
-                "type": "object",
-                "properties": {
-                    "success": {
-                        "type": "boolean",
-                        "enum": [True]
-                    },
-                    "auth_token": {"type": "string"}
-                },
-                "required": ["success", "auth_token"],
-                "additionalProperties": False
-            }
-        },
-        "$ref": "#/definitions/get_token_response_success"
+        "$ref": "file:///" + os.getcwd() + "\\definitions.json#/definitions/get_token_response_success"
     }
     validate(response, schema)
 
 
-def add_car_response_success(response):
+def validate_json_in_response_to_successful_add_car_request(response):
     schema ={
-        "type": "object",
-        "properties": {
-            "success": {
-                "type": "boolean",
-                "enum": [True]
-            },
-        },
-        "required": ["success"],
-        "additionalProperties": False
+        "$ref": "file:///" + os.getcwd() + "\\definitions.json#/definitions/add_car_response_success"
     }
     validate(response, schema)
 
 
-def validate_car_data_json(car_data):
+def validate_json_in_response_to_successful_get_car_request(response):
     schema = {
-        "definitions": {
-            "car_details": {
-                "type": "object",
-                "properties": {
-                    "car_id": {"type": "number"},
-                    "brand": {"type": "string"},
-                    "model": {"type": "string"},
-                    "power_rating": {"type": "integer"},
-                    "daily_price": {"type": "integer"},
-                },
-                "required": ["car_id", "brand", "model", "power_rating", "daily_price"],
-                "additionalProperties": False
-            }
-        },
-        "type": "object",
-        "data": {"$ref": "#/definitions/car_details"}
-    }
-    validate(car_data, schema)
-
-
-def get_car_response_success(response):
-    schema = {
-        "definitions": {
-            "car_details": {
-                "type": "object",
-                "properties": {
-                    "car_id": {"type": "number"},
-                    "brand": {"type": "string"},
-                    "model": {"type": "string"},
-                    "power_rating": {"type": "integer"},
-                    "daily_price": {"type": "integer"},
-                },
-                "required": ["car_id", "brand", "model", "power_rating", "daily_price"],
-                "additionalProperties": False
-            },
-            "get_car_response_success": {
-                "type": "object",
-                "properties": {
-                    "success": {
-                        "type": "boolean",
-                        "enum": [True]
-                    },
-                    "data": {"$ref": "#/definitions/car_details"}
-                },
-                "required": ["success", "data"],
-                "additionalProperties": False
-            }
-        },
-        "$ref": "#/definitions/get_car_response_success"
+        "$ref": "file:///" + os.getcwd() + "\\definitions.json#/definitions/get_car_response_success"
     }
     validate(response, schema)
 
 
-def get_cars_list_response_success(response):
+def validate_json_in_response_to_successful_get_cars_list_request(response):
     schema = {
-        "definitions": {
-            "car_details": {
-                "type": "object",
-                "properties": {
-                    "car_id": {"type": "number"},
-                    "brand": {"type": "string"},
-                    "model": {"type": "string"},
-                    "power_rating": {"type": "integer"},
-                    "daily_price": {"type": "integer"},
-                },
-                "required": ["car_id", "brand", "model", "power_rating", "daily_price"],
-                "additionalProperties": False
-            },
-            "get_cars_list_response_success": {
-                "type": "object",
-                "properties": {
-                    "success": {
-                        "type": "boolean",
-                        "enum": [True]
-                    },
-                    "data": {"type": "array",
-                             "items": {"$ref": "#/definitions/car_details"}
-                             }
-                },
-                "required": ["success", "data"],
-                "additionalProperties": False
-            }
-        },
-        "$ref": "#/definitions/get_cars_list_response_success"
+        "$ref": "file:///" + os.getcwd() + "\\definitions.json#/definitions/get_cars_list_response_success"
     }
     validate(response, schema)
 
 
-def validate_response_fail_json(response):
+def validate_json_in_response_to_successful_delete_car_request(response):
     schema = {
-        "definitions": {
-            "response_fail": {
-                "type": "object",
-                "properties": {
-                    "success": {
-                        "type": "boolean",
-                        "enum": [False]
-                    },
-                    "errorMessage": {"type": "string"}
-                },
-                "required": ["success", "errorMessage"],
-                "additionalProperties": False
-            }
-        },
-        "$ref": "#/definitions/response_fail"
+        "$ref": "file:///" + os.getcwd() + "\\definitions.json#/definitions/delete_car"
     }
     validate(response, schema)
 
 
-def delet_car_response_success(response):
+def validate_json_in_response_to_failed_request(response):
     schema = {
-        "definitions": {
-            "delete_car": {
-                "type": "object",
-                "properties": {
-                    "success": {
-                        "type": "boolean",
-                        "enum": [True]
-                    },
-                },
-                "required": ["success"],
-                "additionalProperties": False
-            }
-        },
-        "$ref": "#/definitions/delete_car"
+        "$ref": "file:///" + os.getcwd() + "\\definitions.json#/definitions/response_fail"
     }
     validate(response, schema)

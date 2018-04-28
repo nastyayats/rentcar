@@ -1,8 +1,8 @@
-
+  @get
   Feature: manage cars list
 
     Scenario: get car
-      Given create car with brand TOYOTA, model YARIS, power rating 100 and daily price 150
+      Given prepare car with brand TOYOTA, model YARIS, power rating 100 and daily price 150
       When send request to add car and retrieve its car_id
       When send request to get car
       Then receive response with code 200
@@ -27,7 +27,7 @@
     @blocked @bug#3
     Scenario: get cars list
       Given all cars are removed from app
-      And create car with brand A, model B, power rating 1 and daily price 2
+      And prepare car with brand A, model B, power rating 1 and daily price 2
       When send requests to add 10 cars and verify cars added
       When send request to get cars list
       Then receive response with code 200

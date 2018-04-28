@@ -1,0 +1,143 @@
+{
+  "definitions": {
+    "get_token_response_success": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        },
+        "auth_token": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "success",
+        "auth_token"
+      ],
+      "additionalProperties": false
+    },
+    "add_car_response_success": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        }
+      },
+      "required": [
+        "success"
+      ],
+      "additionalProperties": false
+    },
+    "car_details": {
+      "type": "object",
+      "properties": {
+        "car_id": {
+          "type": "number"
+        },
+        "brand": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "power_rating": {
+          "type": "integer"
+        },
+        "daily_price": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "car_id",
+        "brand",
+        "model",
+        "power_rating",
+        "daily_price"
+      ],
+      "additionalProperties": false
+    },
+    "get_car_response_success": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        },
+        "data": {
+          "$ref": "#/definitions/car_details"
+        }
+      },
+      "required": [
+        "success",
+        "data"
+      ],
+      "additionalProperties": false
+    },
+    "get_cars_list_response_success": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/car_details"
+          }
+        }
+      },
+      "required": [
+        "success",
+        "data"
+      ],
+      "additionalProperties": false
+    },
+    "response_fail": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean",
+          "enum": [
+            false
+          ]
+        },
+        "errorMessage": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "success",
+        "errorMessage"
+      ],
+      "additionalProperties": false
+    },
+    "delete_car": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        }
+      },
+      "required": [
+        "success"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
+
+

@@ -1,4 +1,4 @@
-
+  @delete
   Feature: delete car
 
     Scenario: delete car

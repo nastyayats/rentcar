@@ -1,61 +1,58 @@
 from behave import *
-from hamcrest import *
 import validatejson
-from getcarslist import get_cars_list, verify_car_ids_unique
-from getcar import get_car, verify_car_parameters
-from addcar import get_last_car_id
+from cars import *
 
 
 @given('car with car_id exists in app')
 def step_impl(context):
-    response = get_cars_list(context.read_token)
+    response = send_cars_list_retrieval_request(context.read_token)
     context.car_id= get_last_car_id(response.json().get('data'))
 
 
 @given('car with car_id is absent in app')
 def step_impl(context):
-    response = get_cars_list(context.read_token)
+    response = send_cars_list_retrieval_request(context.read_token)
     context.car_id = get_last_car_id(response.json().get('data')) + 1
 
 
 @when('send request to get car with car_id {car_id}')
 def step_impl(context, car_id):
-    context.response = get_car(car_id, context.read_token)
+    context.response = send_car_retrieval_request(car_id, context.read_token)
     context.car_id = car_id
 
 
 @when('send request to get car')
 def step_impl(context):
-    context.response = get_car(context.car_id, context.read_token)
+    context.response = send_car_retrieval_request(context.car_id, context.read_token)
 
 
 @when('send request to get cars list')
 def step_impl(context):
-    context.response = get_cars_list(context.read_token)
+    context.response = send_cars_list_retrieval_request(context.read_token)
 
 
 @then('get car response is valid')
 def step_impl(context):
-    validatejson.get_car_response_success(context.response.json())
+    validatejson.validate_json_in_response_to_successful_get_car_request(context.response.json())
 
 
 @then('response contains car {brand}, {model} with power rating {power:d} and daily price {price:d}')
 def step_impl(context, brand, model, power, price):
     data = context.response.json().get('data')
-    verify_car_parameters(data, brand, model, power, price)
+    verify_car_data(data, brand, model, power, price)
 
 
 @then('get cars list response is valid and contains {number} cars with unique ids')
 def step_impl(context, number):
-    validatejson.get_cars_list_response_success(context.response.json())
+    validatejson.validate_json_in_response_to_successful_get_cars_list_request(context.response.json())
     data = context.response.json().get('data')
     assert_that(len(data), equal_to(int(number)))
-    verify_car_ids_unique(data)
+    verify_car_ids_uniqueness(data)
 
 
 @then('get cars list response is valid but contains no cars')
 def step_impl(context):
-    validatejson.get_cars_list_response_success(context.response.json())
+    validatejson.validate_json_in_response_to_successful_get_cars_list_request(context.response.json())
     assert_that(len(context.response.json().get('data')) == 0)
 
 

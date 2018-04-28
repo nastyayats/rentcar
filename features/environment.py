@@ -1,4 +1,4 @@
-from gettoken import get_token
+from tokens import get_token
 
 
 def before_all(context):
