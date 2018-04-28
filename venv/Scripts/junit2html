@@ -1,4 +1,0 @@
-#!C:\Users\IEUser\PycharmProjects\RentACar\venv\Scripts\python.exe
-
-from junit2htmlreport import runner
-runner.start()
