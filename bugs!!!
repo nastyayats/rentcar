@@ -10,6 +10,7 @@ Send http request GET with url /v1/cars to retrieve cars list.
 Receive response with only 8 cars in array 'data'.
 Expected result:
 It should be no limitations on amount of cars in response.
+Or, if there is some paging in car retrieval, this info should be added to specification.
 
 
 Bug #2
