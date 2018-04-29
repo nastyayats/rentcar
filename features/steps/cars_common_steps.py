@@ -2,9 +2,9 @@ from behave import *
 from hamcrest import *
 
 
-@then('receive response with code {code:d}') #change to response with status ok
+@then('receive response with code {code:d}')  # change to response with status ok
 def step_impl(context, code):
-   assert_that(context.response.status_code, equal_to(code))
+    assert_that(context.response.status_code, equal_to(code))
 
 
 @then('response contains error message: {error_message}')

@@ -24,7 +24,7 @@ def step_impl(context, car_id):
 
 @then('response for car removal request is valid')
 def step_impl(context):
-    validatejson.validate_json_in_response_to_successful_delete_car_request(context.response.json())
+    validatejson.successful_delete_car_response(context.response.json())
 
 
 @then('car with car_id is absent in db')

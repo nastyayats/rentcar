@@ -2,20 +2,19 @@ import requests
 import json
 from hamcrest import assert_that, equal_to
 
-
 url = 'http://localhost:5000/v1/cars'
 
 
-def set_request_headers(token):
+def create_request_headers(token):
     return {'Content-Type': 'application/json', 'auth_token': token}
 
 
 def prepare_car_data(brand, model, power, price):
-    return json.dumps({'brand': brand, 'model': model, 'power_rating':power, 'daily_price':price})
+    return json.dumps({'brand': brand, 'model': model, 'power_rating': power, 'daily_price': price})
 
 
 def send_car_creation_request(w_token, payload):
-    response = requests.post(url, headers=set_request_headers(w_token), data=payload)
+    response = requests.post(url, headers=create_request_headers(w_token), data=payload)
     print('Response for car creation request is received with code {}'.format(response.status_code))
     print(response.text)
     return response
@@ -28,8 +27,9 @@ def get_id_of_created_car(old_list, new_list):
 
 
 def send_car_retrieval_request(car_id, r_token):
-    response = requests.get(url + '/' + car_id, headers=set_request_headers(r_token))
-    print('Response to car retrieval request for car with id {} is received with code {}'.format(car_id, response.status_code))
+    response = requests.get(url + '/' + car_id, headers=create_request_headers(r_token))
+    print('Response to car retrieval request for car with id {} is received with code {}'
+          .format(car_id, response.status_code))
     print(response.text)
     return response
 
@@ -42,7 +42,7 @@ def verify_car_data(data, brand, model, power, price):
 
 
 def send_cars_list_retrieval_request(r_token):
-    response = requests.get(url, headers=set_request_headers(r_token))
+    response = requests.get(url, headers=create_request_headers(r_token))
     print('Response to cars list retrieval requestis received with code {}'.format(response.status_code))
     print(response.text)
     return response
@@ -64,11 +64,11 @@ def verify_car_ids_uniqueness(data):
 
 
 def send_car_removal_request(w_token, car_id):
-    response = requests.delete(url + '/' + car_id, headers=set_request_headers(w_token))
-    print('Response to car removal request for car with id {} is received with code {}'.format(car_id, response.status_code))
+    response = requests.delete(url + '/' + car_id, headers=create_request_headers(w_token))
+    print('Response to car removal request for car with id {} is received with code {}'.
+          format(car_id, response.status_code))
     print(response.text)
     return response
-
 
 
 def verify_car_removal(car_id, r_token):
@@ -79,6 +79,3 @@ def verify_car_removal(car_id, r_token):
     response = send_cars_list_retrieval_request(r_token)
     ids_list = [x.get('car_id') for x in response.json().get('data')]
     assert_that(car_id not in ids_list)
-
-
-

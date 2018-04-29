@@ -44,4 +44,4 @@ def step_impl(context):
 
 @then('response for car creation request is valid')
 def step_impl(context):
-    validatejson.validate_json_in_response_to_successful_add_car_request(context.response.json())
+    validatejson.successful_add_car_response(context.response.json())
