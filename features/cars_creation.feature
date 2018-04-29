@@ -62,8 +62,8 @@
       | {"brand":"A", "model":"B", "power_rating":"str", "daily_price":1}          | Expected key 'power_rating' having non-empty integer value, got type <type 'unicode'> with value str |
       | {"brand":"A", "model":"B", "power_rating":1, "daily_price":"str"}          | Expected key 'daily_price' having non-empty integer value, got type <type 'unicode'> with value str  |
 #      next 2 examples fail because of bug#5
-      | {"brand":"", "model":"B", "power_rating":1, "daily_price":1}               | Expected key 'model' having non-empty string/unicode value, got type <type 'unicode'> with value  |
-      | {"brand":"A", "model":"", "power_rating":1, "daily_price":1}               | Expected key 'model' having non-empty string/unicode value, got type <type 'unicode'> with value  |
+      | {"brand":"", "model":"B", "power_rating":1, "daily_price":1}               | Expected key 'model' having non-empty string/unicode value, got type <type 'unicode'> with value ' ' |
+      | {"brand":"A", "model":"", "power_rating":1, "daily_price":1}               | Expected key 'model' having non-empty string/unicode value, got type <type 'unicode'> with value ' ' |
 #      next 2 examples fail because of bug#6
       | {"brand":"A", "model":"B", "power_rating":1.5, "daily_price":1}            | Expected key 'daily_price' having non-empty integer value, got type <type 'unicode'> with value 1.5  |
       | {"brand":"A", "model":"B", "power_rating":1, "daily_price":1.5}            | Expected key 'daily_price' having non-empty integer value, got type <type 'unicode'> with value 1.5  |
