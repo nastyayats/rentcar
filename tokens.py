@@ -1,15 +1,17 @@
 import requests
 import json
 
-id = 'f2a1ed52710d4533bde25be6da03b6e3'
-secret = 'ZYDPLLBWSK3MVQJSIYHB1OR2JXCY0X2C5UJ2QAR2MAAIT5Q'
 url = 'http://localhost:5000/v1/token'
 
 
-def get_token(scope):
-    payload = {'client_id': id, 'client_secret': secret, 'scope':scope}
-    r = requests.post(url, data=json.dumps(payload))
-    return r.json().get('auth_token')
+def prepare_token_payload(client_id, client_secret, scope):
+    return json.dumps({'client_id': client_id, 'client_secret': client_secret, 'scope': scope})
 
 
-# todo: add here functions for tokens testing
+def send_token_generation_request(payload):
+    response = requests.post(url, data=payload)
+    print('Response to token generation request is received with code {}'
+          .format(response.status_code))
+    print(response.text)
+    return response
+

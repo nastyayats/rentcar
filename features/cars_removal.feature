@@ -9,7 +9,7 @@
       Then car with car_id is absent in db
 
 
-    @fails @bug#2
+    @fails @bug2
     Scenario: try to remove car that does not exist in db
       Given car with car_id is absent in db
       When send request to remove car with car_id

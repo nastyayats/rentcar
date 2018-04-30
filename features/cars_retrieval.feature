@@ -16,7 +16,7 @@
       Then response contains error message: car with id <car_id> not found in database
 
 
-    @fails @blocked @bug#3
+    @fails @blocked @bug3
     Scenario: try to get empty cars list
 #      next step fails because of bug#3
       Given all cars are removed from db
@@ -25,7 +25,7 @@
       And response for cars list retrieval request is valid but contains no cars
 
 
-    @blocked @bug#3
+    @blocked @bug3
     Scenario: get cars list
 #      next step fails because of bug#3
       Given all cars are removed from db

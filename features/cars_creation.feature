@@ -15,7 +15,7 @@
       | TOYOTA | CAMRY | 500 | 500 |
 
 
-    @fails @bug#4
+    @fails @bug4
     Scenario Outline: try to create car with invalid daily price
       Given prepare car with brand TOYOTA, model YARIS, power rating 100 and daily price <price>
       When send request to create car
@@ -24,7 +24,7 @@
 
       Examples: invalid price values
       |price| error_message                                                      |
-#     firs example fails beacause of bug#4
+#     first example fails beacause of bug#4
       | 0   | Key 'daily_price' must have a value >= 0 and <= 500, got value 0   |
       | -1  | Key 'daily_price' must have a value >= 0 and <= 500, got value -1  |
       | 501 | Key 'daily_price' must have a value >= 0 and <= 500, got value 501 |
@@ -43,7 +43,7 @@
       | 501 | Key 'power_rating' must have a value > 0 and <= 500, got value 501 |
 
 
-    @fails @bug#5 @bug#6
+    @fails @bug5 @bug6
     Scenario Outline: try to create car with invalid payload
       Given prepare car with payload <payload>
       When send request to create car

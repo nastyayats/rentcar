@@ -17,15 +17,15 @@ def step_impl(context, payload):
 
 @when('send request to create car')
 def step_impl(context):
-    context.response = send_car_creation_request(context.write_token, context.payload)
+    context.response = send_car_creation_request(context.w_token, context.payload)
 
 
 @when('send requests to create {number:d} cars and verify cars creation')
 def step_impl(context, number):
-    old_list = send_cars_list_retrieval_request(context.read_token).json().get('data')
+    old_list = send_cars_list_retrieval_request(context.r_token).json().get('data')
     for x in range(0, number):
-        send_car_creation_request(context.write_token, context.payload)
-    new_list = send_cars_list_retrieval_request(context.read_token).json().get('data')
+        send_car_creation_request(context.w_token, context.payload)
+    new_list = send_cars_list_retrieval_request(context.r_token).json().get('data')
     assert_that(len(new_list) == len(old_list) + number)
     # current verification is time consuming, but it can be changed
     # after car id will be added to response to car creation request
@@ -33,9 +33,9 @@ def step_impl(context, number):
 
 @when('send request to create car and retrieve its car_id')
 def step_impl(context):
-    old_list = send_cars_list_retrieval_request(context.read_token).json().get('data')
-    context.response = send_car_creation_request(context.write_token, context.payload)
-    new_list = send_cars_list_retrieval_request(context.read_token).json().get('data')
+    old_list = send_cars_list_retrieval_request(context.r_token).json().get('data')
+    context.response = send_car_creation_request(context.w_token, context.payload)
+    new_list = send_cars_list_retrieval_request(context.r_token).json().get('data')
     assert_that(len(new_list) == len(old_list) + 1)
     context.car_id = str(get_id_of_created_car(old_list, new_list).pop())
     # retrieval of cars lists before and after car creation request could be removed
@@ -44,4 +44,4 @@ def step_impl(context):
 
 @then('response for car creation request is valid')
 def step_impl(context):
-    validatejson.successful_add_car_response(context.response.json())
+    validatejson.successful_car_creation_response(context.response.json())
